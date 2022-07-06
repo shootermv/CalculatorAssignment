@@ -1,0 +1,7 @@
+header.header {
+  border: 1px solid blue;
+  display: flex;
+}
+header.header input {
+  flex: 1;
+}
