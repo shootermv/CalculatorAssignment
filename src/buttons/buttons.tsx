@@ -2,10 +2,12 @@ import "./buttons.css";
 
 export default function Buttons({
   onButtonClick,
-  equalClick
+  equalClick,
+  emptyClick
 }: {
   onButtonClick: Function;
   equalClick: Function;
+  emptyClick: Function;
 }) {
   return (
     <section className="operators">
@@ -16,7 +18,7 @@ export default function Buttons({
       ))}
 
       <button onClick={() => equalClick()}>=</button>
-      <button>c</button>
+      <button onClick={() => emptyClick()}>c</button>
     </section>
   );
 }
