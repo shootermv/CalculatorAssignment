@@ -24,7 +24,7 @@ export const calcExpr = (str: string): number => {
   });
   return res;
 };
-export const validate = (str: string) => {
+export const validate = (str: string): boolean => {
   // cannot include only num
   if (!/\+|\-|\*|\//.test(str)) return false;
   // cannot finish with operator

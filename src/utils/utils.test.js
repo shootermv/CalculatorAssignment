@@ -8,7 +8,10 @@ describe("calcExpr", () => {
   });
 });
 describe("parseString", () => {
-  test("ac", () => {
+  test("minus and power expressions", () => {
     expect(parseString("3*20-30/2")).toBe(45);
+  });
+  test("invalid", () => {
+    expect(parseString("3*20-30/2-")).toBe("3*20-30/2-");
   });
 });
