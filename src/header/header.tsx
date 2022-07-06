@@ -1,9 +1,9 @@
 import "./header.css";
 
-export default function Header() {
+export default function Header({ displayedStr }) {
   return (
     <header className="header">
-      <input />
+      <input value={displayedStr} />
     </header>
   );
 }
