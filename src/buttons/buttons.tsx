@@ -1,9 +1,11 @@
 import "./buttons.css";
 
 export default function Buttons({
-  onButtonClick
+  onButtonClick,
+  equalClick
 }: {
   onButtonClick: Function;
+  equalClick: Function;
 }) {
   return (
     <section className="operators">
@@ -13,7 +15,7 @@ export default function Buttons({
         </button>
       ))}
 
-      <button>=</button>
+      <button onClick={() => equalClick()}>=</button>
       <button>c</button>
     </section>
   );
