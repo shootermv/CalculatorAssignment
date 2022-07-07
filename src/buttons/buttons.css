@@ -1,4 +1,14 @@
 .buttons {
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 5px;
+}
+
+.buttons button,
+.operators button {
+  background-color: #2196f3;
+  height: 2.5em;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
