@@ -1,8 +1,11 @@
 {
-  "name": "calculator-assignment",
+  "name": "calculator-project",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "assignment to build calculator ",
+  "keywords": [
+    "react",
+    "typescript"
+  ],
   "main": "src/index.tsx",
   "dependencies": {
     "react": "18.0.0",
