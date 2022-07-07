@@ -3,10 +3,10 @@ export const calcExpr = (str: string): number => {
   // take out numbers and push to array
   const numsArr: any[] = str.split(/[^\d]/);
   // take out operators and push to array
-  const operatorsArr: any[] = str.replace(/\d/g, "").split("");
+  const operatorsArr: string[] = str.replace(/\d/g, "").split("");
   let res = numsArr[0];
   numsArr.shift(); //remove first
-  numsArr.forEach((num, idx) => {
+  numsArr.forEach((num: number, idx) => {
     switch (operatorsArr[idx]) {
       case "*":
         res = res * num;
@@ -15,7 +15,7 @@ export const calcExpr = (str: string): number => {
         res = res / num;
         break;
       case "+":
-        res = res + +num;
+        res = Number(res) + Number(num);
         break;
       case "-":
         res = res - num;

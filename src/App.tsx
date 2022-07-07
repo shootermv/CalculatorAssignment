@@ -9,7 +9,7 @@ export default function App() {
   const [displayedStr, setDisplayedStr] = useState<string>("");
   const equalClick = () => {
     const parsed = parseString(displayedStr);
-    setDisplayedStr("" + parsed);
+    setDisplayedStr(`${parsed}`);
   };
   const onButtonClick = (num: number) => {
     setDisplayedStr(`${displayedStr}${num}`);
