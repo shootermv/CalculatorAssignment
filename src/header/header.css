@@ -1,10 +1,11 @@
 header.header {
-  border: 1px solid blue;
   display: flex;
 }
 header.header input {
   flex: 1;
-  height: 2.5em;
-  border-radius: 5px;
+  height: 3.5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   outline: none;
+  border: none;
 }
