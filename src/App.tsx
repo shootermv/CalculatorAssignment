@@ -24,6 +24,12 @@ export default function App() {
     if (/^[0-9]$/i.test(key)) {
       onButtonClick(Number(key));
     }
+    if (/\+|\-|\*|\//.test(key)) {
+      onOperatorClick(key);
+    }
+    if (/=/.test(key)) {
+      equalClick();
+    }
   };
   return (
     <div className="App">
