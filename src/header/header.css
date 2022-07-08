@@ -5,4 +5,6 @@ header.header {
 header.header input {
   flex: 1;
   height: 2.5em;
+  border-radius: 5px;
+  outline: none;
 }

@@ -1,14 +1,15 @@
 .buttons {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   gap: 5px;
 }
 
 .buttons button,
 .operators button {
   background-color: #2196f3;
-  height: 2.5em;
+  padding: 1.4em 0;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
