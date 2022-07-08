@@ -1,24 +1,24 @@
 export const calcExpr = (str: string): number => {
   // '2*3' or 3*78/77' or '3-2+1'
   // take out numbers and push to array
-  const numsArr: any[] = str.split(/[^\d]/);
+  const numsArr: any[] = str.split(/\+|\-|\*|\//);
   // take out operators and push to array
-  const operatorsArr: string[] = str.replace(/\d/g, "").split("");
+  const operatorsArr: string[] = str.replace(/[0-9](\.[0-9]+)?/g, "").split("");
   let res = numsArr[0];
   numsArr.shift(); //remove first
   numsArr.forEach((num: number, idx) => {
     switch (operatorsArr[idx]) {
       case "*":
-        res = res * num;
+        res = Number(res) * Number(num);
         break;
       case "/":
-        res = res / num;
+        res = Number(res) / Number(num);
         break;
       case "+":
         res = Number(res) + Number(num);
         break;
       case "-":
-        res = res - num;
+        res = Number(res) - Number(num);
         break;
     }
   });

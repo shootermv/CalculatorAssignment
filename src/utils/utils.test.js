@@ -7,6 +7,7 @@ describe("calcExpr", () => {
     expect(calcExpr("3-2+1")).toBe(2);
     expect(calcExpr("2*3")).toBe(6);
     expect(calcExpr("3*78/78")).toBe(3);
+    expect(calcExpr("2.5+1")).toBe(3.5);
   });
 });
 describe("parseString", () => {

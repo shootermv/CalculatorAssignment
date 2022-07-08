@@ -15,7 +15,6 @@ export default function App() {
     setDisplayedStr(`${displayedStr}${num}`);
   };
   const onOperatorClick = (op: string) => {
-    // logic
     if (displayedStr === "") return; //no opertators when no digits
     if (/\+|\-|\*|\//.test(displayedStr.slice(-1))) return; //cannot add operator twice
     setDisplayedStr(`${displayedStr}${op}`);
