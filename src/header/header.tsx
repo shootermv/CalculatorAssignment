@@ -1,9 +1,15 @@
 import "./header.css";
 
-export default function Header({ displayedStr }) {
+export default function Header({
+  displayedStr,
+  onInputChange
+}: {
+  displayedStr: string;
+  onInputChange: Function;
+}) {
   return (
     <header className="header">
-      <input value={displayedStr} />
+      <input value={displayedStr} onKeyDown={(e) => onInputChange(e.key)} />
     </header>
   );
 }

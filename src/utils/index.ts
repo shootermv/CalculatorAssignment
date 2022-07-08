@@ -33,6 +33,12 @@ export const validate = (str: string): boolean => {
 };
 export const parseString = (str: string) => {
   if (!validate(str)) return str;
+
+  // - at the beginning shuold treated as '0-'
+  if (str.slice(0, 1) === "-") {
+    str = "0" + str;
+  }
+
   // process '*' & '/'
   let res: any[] = str.split(/\-|\+/);
   // '1*2-3' => ['1*2', '3']

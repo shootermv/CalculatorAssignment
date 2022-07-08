@@ -16,4 +16,7 @@ describe("parseString", () => {
   test("invalid", () => {
     expect(parseString("3*20-30/2-")).toBe("3*20-30/2-");
   });
+  test("'-' at beginning shold treated as '0-'", () => {
+    expect(parseString("-3*20-30/2")).toBe(-75);
+  });
 });

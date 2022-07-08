@@ -20,10 +20,15 @@ export default function App() {
     if (/\+|\-|\*|\//.test(displayedStr.slice(-1))) return; //cannot add operator twice
     setDisplayedStr(`${displayedStr}${op}`);
   };
+  const onInputChange = (key: string) => {
+    if (/^[0-9]$/i.test(key)) {
+      onButtonClick(Number(key));
+    }
+  };
   return (
     <div className="App">
       <main>
-        <Header displayedStr={displayedStr} />
+        <Header displayedStr={displayedStr} onInputChange={onInputChange} />
         <Operators onOperatorClick={onOperatorClick} />
         <Buttons
           onButtonClick={onButtonClick}
