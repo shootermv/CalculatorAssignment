@@ -1,5 +1,5 @@
 import "./operators.css";
-
+import { OPERATORS_ARR } from "../utils";
 export default function Operators({
   onOperatorClick
 }: {
@@ -7,7 +7,7 @@ export default function Operators({
 }) {
   return (
     <section className="operators">
-      {["+", "-", "*", "/"].map((op) => (
+      {OPERATORS_ARR.map((op) => (
         <button key={op} onClick={() => onOperatorClick(op)}>
           {op}
         </button>
