@@ -1,18 +1,18 @@
 header.header {
   display: flex;
-  background: #333;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background: var(--displayBgr);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 header.header input {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   flex: 1;
   height: 3.5em;
-  background: #333;
+  background: var(--displayBgr);
   outline: none;
   border: none;
-  color: #fff;
+  color: var(--displayColor);
   padding: 0 10px;
   font-size: 1.2em;
 }

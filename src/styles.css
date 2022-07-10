@@ -1,3 +1,11 @@
+:root {
+  --mainBgr: #ede47d;
+  --displayBgr: #333;
+  --displayColor: #fff;
+  --buttonBgr: #2196f3;
+  --buttonBgrActive: #0e76c9;
+}
+
 html,
 body {
   padding: 0;
@@ -10,7 +18,7 @@ body {
 .App {
   height: 100vh;
   font-family: sans-serif;
-  background: #ede47d;
+  background: var(--mainBgr);
   display: flex;
   flex-direction: column;
   align-items: stretch;

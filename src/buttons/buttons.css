@@ -6,7 +6,7 @@
 
 .buttons button,
 .operators button {
-  background-color: #2196f3;
+  background-color: var(--buttonBgr);
   padding: 1.4em 0;
   color: #fff;
   border: none;
@@ -20,9 +20,9 @@
 }
 @keyframes btnclick {
   from {
-    background-color: #2196f3;
+    background-color: var(--buttonBgr);
   }
   to {
-    background-color: #0e76c9;
+    background-color: var(--buttonBgrActive);
   }
 }
