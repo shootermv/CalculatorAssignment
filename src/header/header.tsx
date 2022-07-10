@@ -9,7 +9,11 @@ export default function Header({
 }) {
   return (
     <header className="header">
-      <input value={displayedStr} onKeyDown={(e) => onInputChange(e.key)} />
+      <input
+        value={displayedStr}
+        onChange={() => {}}
+        onKeyDown={(e) => onInputChange(e.key)}
+      />
     </header>
   );
 }
