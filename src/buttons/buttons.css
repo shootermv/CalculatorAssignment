@@ -13,3 +13,16 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.buttons button:active,
+.operators button:active {
+  animation-name: btnclick;
+  animation-duration: 0.7s;
+}
+@keyframes btnclick {
+  from {
+    background-color: #2196f3;
+  }
+  to {
+    background-color: #0e76c9;
+  }
+}
