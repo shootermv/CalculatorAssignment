@@ -18,14 +18,16 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  border: 10px solid red;
-  border-radius: 10px;
+  background: #fff;
+  padding: 2px;
 }
+/*desktop*/
 @media only screen and (min-width: 450px) {
   .App {
     align-items: center;
   }
   main {
+    margin-top: 40px;
     width: 450px;
   }
 }
