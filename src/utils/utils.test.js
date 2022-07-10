@@ -14,10 +14,10 @@ describe("parseString", () => {
   test("minus and power expressions", () => {
     expect(parseString("3*20-30/2")).toBe(45);
   });
-  test("invalid", () => {
+  test("invalid should return string", () => {
     expect(parseString("3*20-30/2-")).toBe("3*20-30/2-");
   });
-  test("'-' at beginning shold treated as '0-'", () => {
+  test("'-' at the beginning shold treated as '0-'", () => {
     expect(parseString("-3*20-30/2")).toBe(-75);
   });
 });
