@@ -12,6 +12,7 @@ export default function Header({
       <input
         value={displayedStr}
         onChange={() => {}}
+        placeholder="0"
         onKeyDown={(e) => onInputChange(e.key)}
       />
     </header>
