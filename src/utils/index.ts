@@ -1,5 +1,4 @@
-export const OPERATORS = /\+|\-|\x|\//;
-export const OPERATORS_ARR = ["+", "-", "x", "/"];
+import { OPERATORS } from "../constants";
 export const calcExpr = (str: string): number => {
   // '2*3' or 3*78/77' or '3-2+1'
   // take out numbers and push to array

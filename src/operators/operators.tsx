@@ -1,5 +1,5 @@
 import "./operators.css";
-import { OPERATORS_ARR } from "../utils";
+import { OPERATORS_ARR } from "../constants";
 export default function Operators({
   onOperatorClick
 }: {
