@@ -4,7 +4,7 @@ import Operators from "./operators";
 import Buttons from "./buttons";
 import { useState } from "react";
 import { parseString } from "./utils";
-
+import { OPERATORS } from "./constants";
 export default function App() {
   const [displayedStr, setDisplayedStr] = useState<string>("");
   const equalClick = () => {
@@ -16,14 +16,14 @@ export default function App() {
   };
   const onOperatorClick = (op: string) => {
     if (displayedStr === "") return; //no opertators when no digits
-    if (/\+|\-|\*|\//.test(displayedStr.slice(-1))) return; //cannot add operator twice
+    if (OPERATORS.test(displayedStr.slice(-1))) return; //cannot add operator twice
     setDisplayedStr(`${displayedStr}${op}`);
   };
   const onInputChange = (key: string) => {
     if (/^[0-9]$/i.test(key)) {
       onButtonClick(Number(key));
     }
-    if (/\+|\-|\*|\//.test(key)) {
+    if (OPERATORS.test(key)) {
       onOperatorClick(key);
     }
     if (/=/.test(key)) {
